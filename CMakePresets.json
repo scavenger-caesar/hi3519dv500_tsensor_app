@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "configurePresets": [
+      {
+        "name": "aarch64_linux_make",
+        "generator": "Unix Makefiles",
+        "binaryDir": "${sourceDir}/build",
+        "cacheVariables": {
+          "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/toolchains/aarch64/toolchain-aarch64.cmake",
+          "VCPKG_TARGET_TRIPLET": "aarch64-linux",
+          "VCPKG_OVERLAY_TRIPLETS": "${sourceDir}/toolchains/aarch64/triplet"
+        }
+      }
+    ]
+}
